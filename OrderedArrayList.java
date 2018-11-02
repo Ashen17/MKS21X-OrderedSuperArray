@@ -7,8 +7,9 @@ public class OrderedArraylist<T extends Comparable<T>> extends NoNullArrayList<T
   }
   private int Location(T value){
     if (size() == 0){return 0;}
-    for (int pos = size()/2; pos < size(); pos++){
-
+    int half = size()/2;
+    for (int pos = size()/2; pos < size(); pos+= half){
+        
     }
   }
 
