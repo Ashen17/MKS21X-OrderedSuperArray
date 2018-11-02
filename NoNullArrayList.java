@@ -6,14 +6,16 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       this.super(capacity);
   }
   public boolean add(T value){
-    if (value == null){
-      throw new IllegalArgumentException();
-    }
+    NoNull(value);
     super.add(value);
   }
   public T set(int pos, T value){
-
-
+    NoNull(value);
+    super.set(pos, value);
+  }
+  public void add(int index, T value){
+    NoNull(value);
+    super.set(pos, value);
   }
   private void NoNull(T value){
     if (value == null){
