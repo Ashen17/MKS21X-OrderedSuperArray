@@ -3,17 +3,17 @@ public class NoNullArrayList<T> extends ArrayList<T>{
 
   public NoNullArrayList(){}
   public NoNullArrayList(int capacity){
-      this.super(capacity);
+      super(capacity);
   }
   public boolean add(T value){
     NoNull(value);
-    super.add(value);
+    return super.add(value);
   }
   public T set(int pos, T value){
     NoNull(value);
-    super.set(pos, value);
+    return super.set(pos, value);
   }
-  public void add(int index, T value){
+  public void add(int pos, T value){
     NoNull(value);
     super.set(pos, value);
   }
